@@ -4,19 +4,6 @@
 Collect and preprocess customer reviews from three Ethiopian banking apps on Google Play Store to analyze customer satisfaction trends.
 
 ## 🛠️ Task 1: Data Collection & Preprocessing
-### 📂 Folder Structure
-EthiopiaBankAppAnalysis/
-├── data/
-│ ├── raw/ # Raw JSON/scraped data
-│ └── processed/ # Cleaned CSV files
-├── src/
-│ ├── scrape_reviews.py # Main scraping script
-│ └── preprocess_reviews.py # Data cleaning script
-├── .gitignore
-├── requirements.txt
-└── README.md
-
-
 ### 🔍 Target Banks
 1. Commercial Bank of Ethiopia (CBE)
 2. Bank of Abyssinia (BOA)
