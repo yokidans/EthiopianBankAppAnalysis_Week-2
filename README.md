@@ -1,78 +1,151 @@
-# Ethiopian Bank App Review Analysis - Task 1
-
-## 📌 Objective
-Collect and preprocess customer reviews from three Ethiopian banking apps on Google Play Store to analyze customer satisfaction trends.
-
-## 🛠️ Task 1: Data Collection & Preprocessing
-### 📂 Folder Structure
-EthiopiaBankAppAnalysis/
-### ├── data/
-### │ ├── raw/ # Raw scraped data
-### │ └── processed/ # Cleaned CSV files
-### ├── src/
-### │ ├── scrape_reviews.py # Main scraping script
-### │ └── preprocess_reviews.py # Data cleaning script
-### ├── .gitignore
-### ├── requirements.txt
-### └── README.md 
-
-### 🔍 Target Banks
+# Ethiopian Bank App Review Analysis
+![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+Project Overview
+markdown
+## 📌 Project Overview
+A comprehensive NLP pipeline analyzing customer reviews from three major Ethiopian banking apps:
 1. Commercial Bank of Ethiopia (CBE)
 2. Bank of Abyssinia (BOA)
 3. Dashen Bank
 
-### ⚙️ Technical Implementation
-**Scraping Script Features:**
-- Uses `google-play-scraper` Python package
-- Handles network errors with retry mechanism (3 attempts)
-- Collects 400+ reviews per bank (1,200+ total)
-- Extracts:
-  - Review text
-  - Star rating (1-5)
-  - Review date
-  - App version
-  - Thumbs-up count
+The project delivers actionable insights through four key phases:
+Branch Structure Summary
+markdown
+## 🌿 Branch Architecture
+| Branch | Purpose | Key Deliverables |
+|--------|---------|------------------|
+| `data-collection` | Raw data acquisition | Scraped reviews, cleaned datasets |
+| `sentiment-analysis` | Emotional tone evaluation | Sentiment scores, classification models |
+| `oracle-integration` | Data storage solution | Database schema, loading scripts |
+| `visualization` | Insight presentation | Dashboards, analytical reports |
 
-**Preprocessing Steps:**
-1. Deduplication (same review from same bank)
-2. Date standardization (YYYY-MM-DD format)
+# Detailed Task Integration
+## Task 1: Data Collection
+markdown
+## 🔍 Data Collection (Task 1)
+**Objective**: Acquire and preprocess 1,200+ customer reviews (400+ per bank)
+
+**Technical Implementation**:
+- `google-play-scraper` Python package
+- Automated retry mechanism (3 attempts)
+- Outputs to `/data/raw/` and `/data/processed/`
+
+**Preprocessing Pipeline**:
+1. Deduplication
+2. Date standardization (YYYY-MM-DD)
 3. Text cleaning:
-   - Remove extra whitespace
-   - Handle missing values
-4. Quality filtering:
-   - Remove reviews < 3 characters
-   - Exclude 0-star ratings (potential fake reviews)
+   - Whitespace normalization
+   - Special character handling
 
-### 🚀 How to Run
- bash
- 
-    1. Install dependencies
-        pip install -r requirements.txt
-    2. Run scraper (saves to data/raw/)
-        python src/scrape_reviews.py
-    3. Preprocess data (saves to data/processed/)
-        python src/preprocess_reviews.py
+**How to Run**:
 
-## 📊 Expected Output
-- Raw Data (per bank):
-- Processed Data:
+    pip install -r requirements.txt
+    python src/scrape_reviews.py
+    python src/preprocess_reviews.py
 
-## ⏳ Time Estimate
-- Step	Duration
-- Scraping	15-30 mins
-- Preprocessing	< 1 min
-##⚠️ Troubleshooting
-### Scraping Fails:
+### Task 2: Sentiment Analysis
+## 😊 Sentiment Analysis (Task 2)
+**Methodology**:
+- Hybrid DistilBERT model with confidence thresholds
+- Three-class classification: Positive/Negative/Neutral
 
-- Try VPN if getting regional restrictions
+**Key Features**:
+- Sentiment distribution by bank
+- Rating-sentiment correlation
+- Thematic sentiment analysis
 
-- Verify package names in scrape_reviews.py
+**Output Structure**:
+### results/
+### ├── sentiment_scores.csv
+### ├── model_metrics.json
+### └── analysis_report.csv
 
-## ✅ Success Criteria
-- 400+ reviews collected per bank
+Task 3: Oracle Integration
+markdown
+## 💾 Oracle Integration (Task 3)
+**Database Schema**:
+- Tables: `reviews`, `sentiments`, `themes`
+- Relationships: One-to-many (review-to-analysis)
 
-- Clean data in standardized CSV format
+**ETL Process**:
+1. CSV → Pandas DataFrame
+2. Data validation
+3. Batch loading (1000 rows/commit)
 
-- No duplicate reviews
+**Configuration**:
+- Connection details in `config/db.ini`
+- SQL scripts in `migration_scripts/`
 
-- All dates normalized
+Task 4: Visualization
+## 📊 Visualization (Task 4)
+**Dashboard Components**:
+1. Sentiment chart by bank
+2. Theme frequency treemap
+3. Rating distribution over time
+
+**Technical Stack**:
+- Plotly for interactive visuals
+- Automated HTML report generation
+
+**Access**:
+streamlit run dashboard/app.py
+text
+
+## Unified Project Structure
+
+## 🗂 Project Structure
+EthiopianBankAppAnalysis/
+### ├── data/ # All data assets
+### │ ├── raw/ # Raw scraped data (Task 1)
+### │ ├── processed/ # Cleaned datasets (Task 1)
+### │ └── results/ # Analysis outputs (Tasks 2-4)
+### ├── src/
+### │ ├── collection/ # Task 1 scripts
+### │ ├── analysis/ # Task 2 scripts
+### │ ├── database/ # Task 3 scripts
+### │ └── visualization/ # Task 4 scripts
+### ├── docs/ # Documentation
+### ├── requirements.txt # Python dependencies
+### └── README.md # This file
+
+text
+Consolidated How-To Guide
+markdown
+## 🚀 Getting Started
+
+### Installation
+
+    git clone https://github.com/yokidans/EthiopianBankAppAnalysis_Week-2.git
+    cd EthiopianBankAppAnalysis_Week-2
+    git checkout main
+    pip install -r requirements.txt
+Workflow
+Data Collection → data-collection branch
+
+Analysis → sentiment-analysis branch
+
+Database Setup → oracle-integration branch
+
+Visualization → visualization branch
+
+## Troubleshooting Matrix
+
+## ⚠️ Common Issues
+
+| Problem | Solution | Affected Task |
+|---------|----------|---------------|
+| Scraping fails | Use VPN, verify package names | Task 1 |
+| Sentiment misclassification | Adjust confidence thresholds | Task 2 |
+| DB connection issues | Verify credentials in db.ini | Task 3 |
+| Visualization loading slow | Reduce dataset sample size | Task 4 |
+Success Metrics
+markdown
+## ✅ Validation Criteria
+
+| Task | Success Metrics |
+|------|-----------------|
+| 1 | 400+ clean reviews/bank, no duplicates |
+| 2 | 85%+ sentiment accuracy, comprehensive report |
+| 3 | All data loaded, query response <2s |
+| 4 | Interactive dashboards, auto-generated reports |
