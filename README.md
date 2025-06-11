@@ -1,4 +1,4 @@
-# Ethiopian Bank App Review Analysis - Task 1
+# Ethiopian Bank App Review Analysis 
 
 ## 📌 Objective
 Collect and preprocess customer reviews from three Ethiopian banking apps on Google Play Store to analyze customer satisfaction trends.
