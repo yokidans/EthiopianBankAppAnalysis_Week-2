@@ -1,0 +1,139 @@
+{
+  "Commercial Bank of Ethiopia": {
+    "Account Access": [
+      "account",
+      "developer"
+    ],
+    "Transactions": [
+      "add",
+      "application",
+      "say",
+      "send",
+      "time",
+      "transaction",
+      "transfer",
+      "try"
+    ],
+    "User Experience": [
+      "app",
+      "balance",
+      "cbe",
+      "good app",
+      "money",
+      "nice app",
+      "update",
+      "use",
+      "user",
+      "version",
+      "\u1260\u1323\u121d"
+    ],
+    "Fees & Charges": [
+      "bank",
+      "branch",
+      "code",
+      "ethiopia",
+      "fix",
+      "mobile",
+      "phone"
+    ],
+    "Customer Support": [
+      "banking",
+      "love",
+      "make",
+      "need",
+      "option",
+      "problem",
+      "service",
+      "thank",
+      "work"
+    ]
+  },
+  "Bank of Abyssinia": {
+    "Account Access": [
+      "account",
+      "banking app",
+      "developer",
+      "login"
+    ],
+    "User Experience": [
+      "app",
+      "bad app",
+      "boa",
+      "experience",
+      "good app",
+      "money",
+      "update",
+      "use",
+      "version"
+    ],
+    "Fees & Charges": [
+      "app work",
+      "bank",
+      "ethiopia",
+      "fix",
+      "mobile",
+      "phone"
+    ],
+    "Transactions": [
+      "application",
+      "bug",
+      "developer option",
+      "say",
+      "time",
+      "transaction",
+      "transfer",
+      "try"
+    ],
+    "Customer Support": [
+      "banking",
+      "crash",
+      "issue",
+      "need",
+      "option",
+      "problem",
+      "service",
+      "work"
+    ]
+  },
+  "Dashen Bank": {
+    "Account Access": [
+      "account",
+      "banking app",
+      "digital",
+      "game",
+      "smooth"
+    ],
+    "User Experience": [
+      "app",
+      "experience",
+      "good app",
+      "use",
+      "user"
+    ],
+    "Transactions": [
+      "application",
+      "payment",
+      "time",
+      "transaction",
+      "transfer"
+    ],
+    "Fees & Charges": [
+      "bank",
+      "bank super",
+      "customer",
+      "dashen bank",
+      "mobile"
+    ],
+    "Customer Support": [
+      "banking",
+      "changer",
+      "feature",
+      "love",
+      "make",
+      "need",
+      "service",
+      "step",
+      "work"
+    ]
+  }
+}
