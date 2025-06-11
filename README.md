@@ -21,8 +21,7 @@ markdown
 | `visualization` | Insight presentation | Dashboards, analytical reports |
 
 # Detailed Task Integration
-## Task 1: Data Collection
-markdown
+
 ## 🔍 Data Collection (Task 1)
 **Objective**: Acquire and preprocess 1,200+ customer reviews (400+ per bank)
 
@@ -44,7 +43,6 @@ markdown
     python src/scrape_reviews.py
     python src/preprocess_reviews.py
 
-### Task 2: Sentiment Analysis
 ## 😊 Sentiment Analysis (Task 2)
 **Methodology**:
 - Hybrid DistilBERT model with confidence thresholds
@@ -61,8 +59,6 @@ markdown
 ### ├── model_metrics.json
 ### └── analysis_report.csv
 
-Task 3: Oracle Integration
-markdown
 ## 💾 Oracle Integration (Task 3)
 **Database Schema**:
 - Tables: `reviews`, `sentiments`, `themes`
@@ -77,7 +73,6 @@ markdown
 - Connection details in `config/db.ini`
 - SQL scripts in `migration_scripts/`
 
-Task 4: Visualization
 ## 📊 Visualization (Task 4)
 **Dashboard Components**:
 1. Sentiment chart by bank
